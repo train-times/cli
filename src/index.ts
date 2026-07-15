@@ -1,4 +1,4 @@
-import { getJourneyInfo } from "train-times";
+import { getJourneysData } from "train-times";
 
 import { convertToTableData } from "./convert";
 
@@ -14,7 +14,7 @@ async function displayLiveBoards(from: string, to: string) {
   }
 
   try {
-    const journeys = await getJourneyInfo({
+    const journeys = await getJourneysData({
       apiKey: API_KEY,
       from: fromCrs,
       to: toCrs,
