@@ -14,7 +14,7 @@ async function displayLiveBoards(from: string, to: string) {
   }
 
   try {
-    const journeys = await getJourneysData({
+    const data = await getJourneysData({
       apiKey: API_KEY,
       from: fromCrs,
       to: toCrs,
@@ -22,14 +22,14 @@ async function displayLiveBoards(from: string, to: string) {
       timeWindow: 120,
     });
 
-    if (journeys.length === 0) {
+    if (!data.journeys?.length) {
       console.log(
-        `No upcoming live trains matching from ${fromCrs} to ${toCrs} found.`,
+        `No upcoming live trains matching from ${data.fromName} to ${data.toName} found.`,
       );
       return;
     }
 
-    const tableData = convertToTableData(journeys);
+    const tableData = convertToTableData(data.journeys);
 
     console.table(tableData, [
       "Schedule",
@@ -43,4 +43,4 @@ async function displayLiveBoards(from: string, to: string) {
   }
 }
 
-await displayLiveBoards("BSK", "WIN");
+await displayLiveBoards("BSK", "XYZ");
