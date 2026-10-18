@@ -6,7 +6,7 @@
     "lint": "oxlint"
   },
   "dependencies": {
-    "train-times": "0.0.4"
+    "train-times": "0.0.5"
   },
   "devDependencies": {
     "@gameroman/config": "0.3.0",
