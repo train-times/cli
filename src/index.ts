@@ -43,4 +43,4 @@ async function displayLiveBoards(from: string, to: string) {
   }
 }
 
-await displayLiveBoards("BSK", "XYZ");
+await displayLiveBoards("BSK", "WIN");

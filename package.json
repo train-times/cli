@@ -6,7 +6,7 @@
     "lint": "oxlint"
   },
   "dependencies": {
-    "train-times": "https://pkg.pr.new/train-times@60ff596"
+    "train-times": "0.0.5"
   },
   "devDependencies": {
     "@gameroman/config": "0.3.0",
